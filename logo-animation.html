@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgb(15, 14, 14);
+    }
+
+    .logo {
+      position: absolute;
+      top:100px;
+      width: 300px;
+      height: auto;
+    }
+
+    #logo1 {
+      animation: scaleUpAndStay 4s ease-in-out forwards;
+    }
+
+    #logo2 {
+      animation: scaleUpAndStay 4s ease-in-out 2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes scaleUpAndDisappear {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      25% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      75% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    @keyframes scaleUpAndStay {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      25% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="afri-agraria.png" alt="Logo 1" id="logo1" class="logo">
+    <img src="afri-agraria2.png" alt="Logo 2" id="logo2" class="logo">
+  </div>
+</body>
+</html>
